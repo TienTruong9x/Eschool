@@ -1,11 +1,11 @@
 <div class="page-header four">
     <div class="container">
         <div class="col-md-6 pull-left">
-            <h3>Registration</h3>
+            <h3>Đăng Ký</h3>
             <h4>User Register Here...!</h4>
         </div>
         <div class="col-md-6 pull-right">
-            <div class="breadcrumbs"><a href="index.html">Home</a> <i>/</i> Registration</div>
+            <div class="breadcrumbs"><a href="/">Home</a> <i>/</i> Registration</div>
         </div>
     </div>
 </div>
@@ -15,64 +15,67 @@
     <div class="container">
         <div class="row">
             <div class="reg_form">
-                <form class="sky-form" id="sky-form">
-                    <header>Don't have an Account? Register Now!</header>
+                <form class="sky-form" id="sky-form" method="POST">
+                    <header>Bạn chưa có tài khoản ? Đăng ký ngay!</header>
+                    <p style="color:red;text-align:center;font-size:14px">{{username}}</p>
                     <fieldset>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-user"></i>
                                 <input type="text" placeholder="Username" name="username">
-                                <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+                                <b class="tooltip tooltip-bottom-right">Dùng để đăng nhập vào website này</b> </label>
+
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
                                 <input type="email" placeholder="Email address" name="email">
-                                <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+                                <b class="tooltip tooltip-bottom-right">Chúng tôi sẽ gửi email xác nhận về email này</b>
+                            </label>
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
                                 <input type="password" id="password" placeholder="Password" name="password">
-                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                                <b class="tooltip tooltip-bottom-right">Cố gắng đừng quên mật khẩu nhé !</b> </label>
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
                                 <input type="password" placeholder="Confirm password" name="passwordConfirm">
-                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                                <b class="tooltip tooltip-bottom-right">Nhập lại mật khẩu bên trên.</b> </label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="row">
                             <div class="section col col-6">
                                 <label class="input">
-                                    <input type="text" placeholder="First name" name="firstname">
+                                    <input type="text" placeholder="Họ" name="firstname">
                                 </label>
                             </div>
                             <div class="section col col-">
                                 <label class="input">
-                                    <input type="text" placeholder="Last name" name="lastname">
+                                    <input type="text" placeholder="Tên của bạn" name="lastname">
                                 </label>
                             </div>
                         </div>
                         <div class="section">
                             <label class="select">
                                 <select name="gender">
-                                    <option disabled="" selected="" value="0">Gender</option>
-                                    <option value="1">Male</option>
-                                    <option value="2">Female</option>
-                                    <option value="3">Other</option>
+                                    <option disabled="" selected="" value="0">Giới tính</option>
+                                    <option value="1">Nam</option>
+                                    <option value="2">Nữ</option>
+                                    <option value="3">Khác</option>
                                 </select>
                                 <i></i> </label>
                         </div>
                         <div class="section">
                             <label class="checkbox">
                                 <input type="checkbox" id="subscription" name="subscription">
-                                <i></i>I want to receive news and special offers</label>
+                                <i></i>Tôi muốn nhận tin tức và khuyến mãi đặc biệt.</label>
                             <label class="checkbox">
                                 <input type="checkbox" id="terms" name="terms">
-                                <i></i>I agree with the Terms and Conditions</label>
+                                <i></i>Tôi đồng ý với điều khoản và điều kiện. </label>
                         </div>
                     </fieldset>
                     <footer>
-                        <button class="btn button" type="submit">Submit</button>
+                        <button class="btn button" type="submit">Đăng ký</button>
                     </footer>
                 </form>
             </div>

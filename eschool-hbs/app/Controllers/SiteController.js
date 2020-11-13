@@ -1,7 +1,7 @@
 class SiteController {
   //[GET] /
   index(req, res, next) {
-    res.send("index");
+    res.render("index", { title: "Trang Chủ | Nguyễn Tiến Trường" });
   }
 }
 
