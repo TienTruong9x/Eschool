@@ -1,0 +1,100 @@
+<div class="page-header four">
+    <div class="container">
+        <div class="col-md-6 pull-left">
+            <h3>Registration</h3>
+            <h4>User Register Here...!</h4>
+        </div>
+        <div class="col-md-6 pull-right">
+            <div class="breadcrumbs"><a href="index.html">Home</a> <i>/</i> Registration</div>
+        </div>
+    </div>
+</div>
+<!-- end page header -->
+<div class="clearfix"></div>
+<div class="section-lg counters m-bottom4">
+    <div class="container">
+        <div class="row">
+            <div class="reg_form">
+                <form class="sky-form" id="sky-form">
+                    <header>Don't have an Account? Register Now!</header>
+                    <fieldset>
+                        <div class="section">
+                            <label class="input"> <i class="icon-append fa fa-user"></i>
+                                <input type="text" placeholder="Username" name="username">
+                                <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+                        </div>
+                        <div class="section">
+                            <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+                                <input type="email" placeholder="Email address" name="email">
+                                <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+                        </div>
+                        <div class="section">
+                            <label class="input"> <i class="icon-append fa fa-lock"></i>
+                                <input type="password" id="password" placeholder="Password" name="password">
+                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                        </div>
+                        <div class="section">
+                            <label class="input"> <i class="icon-append fa fa-lock"></i>
+                                <input type="password" placeholder="Confirm password" name="passwordConfirm">
+                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="row">
+                            <div class="section col col-6">
+                                <label class="input">
+                                    <input type="text" placeholder="First name" name="firstname">
+                                </label>
+                            </div>
+                            <div class="section col col-">
+                                <label class="input">
+                                    <input type="text" placeholder="Last name" name="lastname">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label class="select">
+                                <select name="gender">
+                                    <option disabled="" selected="" value="0">Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Other</option>
+                                </select>
+                                <i></i> </label>
+                        </div>
+                        <div class="section">
+                            <label class="checkbox">
+                                <input type="checkbox" id="subscription" name="subscription">
+                                <i></i>I want to receive news and special offers</label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="terms" name="terms">
+                                <i></i>I agree with the Terms and Conditions</label>
+                        </div>
+                    </fieldset>
+                    <footer>
+                        <button class="btn button" type="submit">Submit</button>
+                    </footer>
+                </form>
+            </div>
+            <form class="sky-form sky-form-modal" id="sky-form2" action="demo-recovery.php">
+                <header>Password recovery</header>
+                <fieldset>
+                    <div class="section">
+                        <label class="label">E-mail</label>
+                        <label class="input"> <i class="icon-append icon-user"></i>
+                            <input type="email" id="email" name="email">
+                        </label>
+                    </div>
+                </fieldset>
+                <footer>
+                    <button class="button eight" name="submit" type="submit">Submit</button>
+                    <a class="button button-secondary modal-closer" href="#">Close</a> </footer>
+                <div class="message"> <i class="icon-ok"></i>
+                    <p>Your request successfully sent!<br>
+                        <a class="modal-closer" href="#">Close window</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--end counters-->
