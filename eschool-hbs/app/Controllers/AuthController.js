@@ -1,13 +1,34 @@
-const Register = require("../Models/Register.model");
+const User = require("../Models/User.model");
 
 class AuthController {
-  //[GET] /
+  //[GET] /Auth/login
   login(req, res, next) {
-    Register.find().then((data) => {
+    User.find().then((data) => {
       res.render("auth/login", {
         title: "Đăng Nhập | Nguyễn Tiến Trường",
         data,
       });
+    });
+  }
+
+  //[POST] /Auth/login
+  loginPost(req, res, next) {
+    let username = req.body.username;
+    let password = req.body.password;
+
+    User.find({ username, password }).then((data) => {
+      if (data) {
+        req.session.res.render("index", {
+          title: "Đăng Nhập | Nguyễn Tiến Trường",
+          data,
+        });
+      } else {
+        let error = "Tài khoản hoặc mật khẩu không chính xác.";
+        res.render("auth/login", {
+          title: "Đăng Nhập | Nguyễn Tiến Trường",
+          error,
+        });
+      }
     });
   }
 
@@ -19,26 +40,38 @@ class AuthController {
   //[POST] /Auth/register
   registerPost(req, res, next) {
     let username = req.body.username;
+    let email = req.body.email;
     let password = req.body.password;
     let passwordConfirm = req.body.passwordConfirm;
 
+    let data = {
+      user: req.body,
+      error: {
+        username: null,
+        passConfirm: null,
+      },
+    };
     if (password !== passwordConfirm) {
-      console.log("2 Password phải trùng nhau");
+      data.error.passConfirm = "Hai mật khẩu phải giống nhau.";
+      res.render("auth/register", {
+        title: "Đăng Ký | Nguyễn Tiến Trường",
+        data,
+      });
       return;
     }
 
-    Register.findOne({ username }).then((user) => {
+    User.findOne({ username }).then((user) => {
       if (user) {
-        console.log("Username đã tồn tại.");
+        data.error.username = "Username đã tồn tại.";
         res.render("auth/register", {
           title: "Đăng Ký | Nguyễn Tiến Trường",
-          username: "Username đã tồn tại.",
+          data,
         });
         return;
       } else {
-        let user = new Register(req.body);
+        let user = new User(req.body);
         user.save().then(() => {
-          res.redirect("/Auth/login");
+          res.render("auth/success", { title: "Thành Công", username, email });
         });
       }
     });

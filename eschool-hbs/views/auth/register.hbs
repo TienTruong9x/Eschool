@@ -17,47 +17,54 @@
             <div class="reg_form">
                 <form class="sky-form" id="sky-form" method="POST">
                     <header>Bạn chưa có tài khoản ? Đăng ký ngay!</header>
-                    <p style="color:red;text-align:center;font-size:14px">{{username}}</p>
+
                     <fieldset>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-user"></i>
-                                <input type="text" placeholder="Username" name="username">
+                                <input type="text" placeholder="Username" name="username" required="required"
+                                    value={{data.user.username}}>
                                 <b class="tooltip tooltip-bottom-right">Dùng để đăng nhập vào website này</b> </label>
-
+                            <small style="color:red;">{{data.error.username}}</small>
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-                                <input type="email" placeholder="Email address" name="email">
+                                <input type="email" placeholder="Email address" name="email" required="required"
+                                    value={{data.user.email}}>
                                 <b class="tooltip tooltip-bottom-right">Chúng tôi sẽ gửi email xác nhận về email này</b>
                             </label>
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                <input type="password" id="password" placeholder="Password" name="password">
+                                <input type="password" id="password" placeholder="Password" name="password"
+                                    required="required">
                                 <b class="tooltip tooltip-bottom-right">Cố gắng đừng quên mật khẩu nhé !</b> </label>
                         </div>
                         <div class="section">
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                <input type="password" placeholder="Confirm password" name="passwordConfirm">
+                                <input type="password" placeholder="Confirm password" name="passwordConfirm"
+                                    required="required">
                                 <b class="tooltip tooltip-bottom-right">Nhập lại mật khẩu bên trên.</b> </label>
+                            <small style="color:red;">{{data.error.passConfirm}}</small>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="row">
                             <div class="section col col-6">
                                 <label class="input">
-                                    <input type="text" placeholder="Họ" name="firstname">
+                                    <input type="text" placeholder="Họ" name="firstname" required="required"
+                                        value={{data.user.firstname}}>
                                 </label>
                             </div>
                             <div class="section col col-">
                                 <label class="input">
-                                    <input type="text" placeholder="Tên của bạn" name="lastname">
+                                    <input type="text" placeholder="Tên của bạn" name="lastname" required="required"
+                                        value={{data.user.lastname}}>
                                 </label>
                             </div>
                         </div>
                         <div class="section">
                             <label class="select">
-                                <select name="gender">
+                                <select name="gender" required="required">
                                     <option disabled="" selected="" value="0">Giới tính</option>
                                     <option value="1">Nam</option>
                                     <option value="2">Nữ</option>
@@ -67,10 +74,12 @@
                         </div>
                         <div class="section">
                             <label class="checkbox">
-                                <input type="checkbox" id="subscription" name="subscription">
+                                <input type="checkbox" id="subscription" name="subscription"
+                                    {{#if data.user.subscription}} checked="checked" {{/if}}>
                                 <i></i>Tôi muốn nhận tin tức và khuyến mãi đặc biệt.</label>
                             <label class="checkbox">
-                                <input type="checkbox" id="terms" name="terms">
+                                <input type="checkbox" id="terms" name="terms" {{#if data.user.terms}} checked="checked"
+                                    {{/if}}>
                                 <i></i>Tôi đồng ý với điều khoản và điều kiện. </label>
                         </div>
                     </fieldset>

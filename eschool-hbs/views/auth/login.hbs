@@ -16,15 +16,15 @@
             <div class="col-md-10 col-md-offset-1 sec-heading text-center">
                 <div class="row">
                     <div class="login_form">
-                        <form class="sky-form" id="sky-form" action="index.html" novalidate>
+                        <form class="sky-form" id="sky-form" method="POST">
                             <header class="font-slim">Login form</header>
                             <fieldset>
                                 <div class="section">
                                     <div class="row">
-                                        <label class="label col col-4">E-mail</label>
+                                        <label class="label col col-4">Username</label>
                                         <div class="col col-8">
                                             <label class="input"> <i class="icon-append fa fa-user"></i>
-                                                <input type="email" name="email">
+                                                <input type="text" name="username" required="required">
                                             </label>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                                         <label class="label col col-4">Password</label>
                                         <div class="col col-8">
                                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                                <input type="password" name="password">
+                                                <input type="password" name="password" required="required">
                                             </label>
                                             <div class="note"><a class="modal-opener" href="#sky-form2">Forgot
                                                     password?</a></div>
@@ -83,5 +83,4 @@
         </div>
     </div>
 </div>
-{{data}}
 <!--end counters-->

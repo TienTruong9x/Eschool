@@ -1,0 +1,42 @@
+.register-success {
+  padding: 5rem 0;
+  margin: 10rem auto 8rem auto;
+}
+.icon svg {
+  height: 50px;
+  color: #49b5b9;
+}
+.congratulation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.congratulation h1 {
+  color: #49b5b9;
+  font-size: 4rem;
+  padding: 0 1rem;
+}
+.congratulation i {
+  color: gold;
+  font-size: 2rem;
+}
+.notify p {
+  margin: 0 auto;
+  width: 70%;
+}
+.next {
+  margin-top: 5rem;
+}
+.next button {
+  border: 1px solid #49b5b9;
+  background-color: #49b5b9;
+  color: #fff;
+  padding: 0.8rem 5rem;
+  font-size: 25px;
+  outline: none;
+}
+.next button:hover {
+  background-color: #58e1e6;
+  color: #fff;
+}

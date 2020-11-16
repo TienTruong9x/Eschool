@@ -2,11 +2,26 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
+var session = require("express-session");
+var passport = require("passport");
+var flash = require("connect-flash");
 var logger = require("morgan");
 var hbs = require("hbs");
 var connectDB = require("./app/config/connect");
 
 var app = express();
+
+//authentication
+app.use(
+  session({
+    secret: "adsa897adsa98bs",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // view engine setup
 hbs.registerPartials(__dirname + "/views/partials");
