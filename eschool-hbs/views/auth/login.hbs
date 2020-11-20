@@ -1,7 +1,7 @@
 <div class="page-header four">
     <div class="container">
         <div class="col-md-6 pull-left">
-            <h3>Loing</h3>
+            <h3>Đăng Nhập</h3>
             <h4>User Login Here...!</h4>
         </div>
         <div class="col-md-6 pull-right">
@@ -17,10 +17,11 @@
                 <div class="row">
                     <div class="login_form">
                         <form class="sky-form" id="sky-form" method="POST">
-                            <header class="font-slim">Login form</header>
+                            <header class="font-slim">Đăng nhập</header>
                             <fieldset>
                                 <div class="section">
                                     <div class="row">
+                                        <small style="color: red;">{{error}}</small>
                                         <label class="label col col-4">Username</label>
                                         <div class="col col-8">
                                             <label class="input"> <i class="icon-append fa fa-user"></i>
@@ -47,15 +48,15 @@
                                         <div class="col col-8">
                                             <label class="checkbox">
                                                 <input type="checkbox" checked="" name="remember">
-                                                <i></i>Keep me logged in</label>
+                                                <i></i>Ghi nhớ đăng nhập</label>
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
                             <footer>
                                 <div class="fright"> <a class="button button-secondary"
-                                        href="/Auth/register">Register</a>
-                                    <button class="button" type="submit">Log in</button>
+                                        href="/Auth/register">Đăng ký</a>
+                                    <button class="button" type="submit">Đăng nhập</button>
                                 </div>
                             </footer>
                         </form>
