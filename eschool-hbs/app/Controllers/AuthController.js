@@ -16,7 +16,8 @@ class AuthController {
     User.findOne({ username, password })
     .then((data) => {
       if (data) {
-        req.session.username_sess = data[0].username;
+        console.log(data);
+        req.session.username_sess = data.username;
         let username_sess = req.session.username_sess;
         res.render("index", {
           title: "Đăng Nhập | Nguyễn Tiến Trường",
@@ -28,7 +29,7 @@ class AuthController {
       }
     })
     .catch(err=>{
-      res.status(500).json("Có lỗi xảy ra!")
+      res.status(500).json("Có lỗi xảy ra! " +err)
     });
   }
 
