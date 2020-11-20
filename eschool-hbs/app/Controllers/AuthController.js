@@ -16,15 +16,15 @@ class AuthController {
     User.findOne({ username, password })
     .then((data) => {
       if (data) {
-        req.session.username = data[0].username;
-        let username = req.session.username;
+        req.session.username_sess = data[0].username;
+        let username_sess = req.session.username_sess;
         res.render("index", {
           title: "Đăng Nhập | Nguyễn Tiến Trường",
-          username,
+          username_sess,
         });
       } else {
         let error = "Tài khoản hoặc mật khẩu không chính xác.";
-        res.render("auth/login",{error});
+        res.render("auth/login",{error,username});
       }
     })
     .catch(err=>{
