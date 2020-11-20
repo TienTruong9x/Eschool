@@ -6,8 +6,13 @@
                     <div class="col-md-6 pull-left nodisplay">Call: +84 3731 88868</div>
                     <div class="col-md-6 pull-right text-right">
                         <ul class="top-right-list">
+                            {{#if username}}
+                            <li><a href="/me/account"><i class="fas fa-user-cog"></i> {{username}}</a></li>
+                            <li><a href="/me/account"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                            {{else}}
                             <li><a href="/Auth/login"><i class="fa fa-lock"></i> Login</a></li>
                             <li><a href="/Auth/register"><i class="fa fa-user"></i> Register</a> | </li>
+                            {{/if}}
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>

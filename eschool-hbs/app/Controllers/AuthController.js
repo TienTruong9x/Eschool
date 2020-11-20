@@ -3,11 +3,8 @@ const User = require("../Models/User.model");
 class AuthController {
   //[GET] /Auth/login
   login(req, res, next) {
-    User.find().then((data) => {
-      res.render("auth/login", {
-        title: "Đăng Nhập | Nguyễn Tiến Trường",
-        data,
-      });
+    res.render("auth/login", {
+      title: "Đăng Nhập | Nguyễn Tiến Trường",
     });
   }
 
@@ -18,9 +15,11 @@ class AuthController {
 
     User.find({ username, password }).then((data) => {
       if (data) {
-        req.session.res.render("index", {
+        req.session.username = data[0].username;
+        let username = req.session.username;
+        res.render("index", {
           title: "Đăng Nhập | Nguyễn Tiến Trường",
-          data,
+          username,
         });
       } else {
         let error = "Tài khoản hoặc mật khẩu không chính xác.";
