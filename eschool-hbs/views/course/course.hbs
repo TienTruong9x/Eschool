@@ -1,0 +1,89 @@
+<div class="courses">
+    <div id="mySidenav" class="sidenav">
+        <a href="/Me/course" id="course">
+            <span>Courses</span>
+            <i class="fas fa-laptop-code"></i>
+        </a>
+        <a href="/Me/trainers" id="trainer">
+            <span>Trainers</span>
+            <i class="fas fa-chalkboard-teacher"></i>
+        </a>
+
+        <a href="/Me/projects" id="projects">
+            <span>Projects</span>
+            <i class="fas fa-code"></i>
+        </a>
+        <a href="/Me/posts" id="post">
+            <span>Posts</span>
+            <i class="fas fa-newspaper"></i>
+        </a>
+    </div>
+    <div class="btn-add">
+        <a href="/Me/course/add"><i class="fas fa-plus-circle fa-3x"></i></a>
+    </div>
+    <div style="margin-left: 80px">
+        <div class="row-fluid">
+            {{#each courses}}
+            <div class="col-lg-4 col-md-4">
+                <div class="cource-box course-box-custom">
+                    <a href="#"><img class="img-responsive" src={{this.image}} alt=""></a>
+                    <div class="cource-text">
+                        <h4><a href="#">{{this.courseName}}</a> <span>${{this.price}}</span></h4>
+                        <p style="overflow:hidden;text-overflow:ellipsis;height: 130px;">{{this.description}}.</p>
+                        <div class="course-handle">
+                            <a href="/Me/course/edit/{{this.slug}}" class="edit"><i class="fas fa-cogs"></i></a>
+                            <a href="#" id="delete-btn" class="delete" data-toggle="modal" data-target="#delete-modal"
+                                data-id={{this._id}} data-name="{{this.courseName}}"><i
+                                    class="fas fa-trash-restore"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Xóa khóa học : </h3>
+                    <b id="nameCourse"></b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn xóa khóa học này ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-success" id="delete-ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<form action="" method="POST" id="delete-form"></form>
+<script>
+    window.onload = () => {
+        var idCourse;
+        var courseName;
+        $('#delete-modal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            idCourse = button.data('id');
+            courseName = button.data('name')
+            console.log('ok')
+            $('#nameCourse').text(courseName + ".");
+        });
+
+        $('#delete-ok').click(() => {
+            $('#delete-form').attr('action', `/Me/course/delete/${idCourse}?_method=DELETE`);
+            $('#delete-form').submit();
+        })
+    }
+</script>

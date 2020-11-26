@@ -26,6 +26,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+//Method overight
+var methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
 //authentication
 app.use(
   session({

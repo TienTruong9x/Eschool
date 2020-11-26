@@ -14,23 +14,23 @@ class AuthController {
     let password = req.body.password;
 
     User.findOne({ username, password })
-    .then((data) => {
-      if (data) {
-        console.log(data);
-        req.session.username_sess = data.username;
-        let username_sess = req.session.username_sess;
-        res.render("index", {
-          title: "Đăng Nhập | Nguyễn Tiến Trường",
-          username_sess,
-        });
-      } else {
-        let error = "Tài khoản hoặc mật khẩu không chính xác.";
-        res.render("auth/login",{error,username});
-      }
-    })
-    .catch(err=>{
-      res.status(500).json("Có lỗi xảy ra! " +err)
-    });
+      .then((data) => {
+        if (data) {
+          console.log(data);
+          req.session.username_sess = data.username;
+          let username_sess = req.session.username_sess;
+          res.render("index", {
+            title: "Đăng Nhập | Nguyễn Tiến Trường",
+            username_sess,
+          });
+        } else {
+          let error = "Tài khoản hoặc mật khẩu không chính xác.";
+          res.render("auth/login", { error, username });
+        }
+      })
+      .catch((err) => {
+        res.status(500).json("Có lỗi xảy ra! " + err);
+      });
   }
 
   //[GET] /Auth/register

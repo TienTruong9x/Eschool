@@ -40,3 +40,97 @@
   background-color: #58e1e6;
   color: #fff;
 }
+
+/* Course */
+.courses {
+  margin: 22rem 0 5rem 0;
+  position: relative;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.5s;
+  padding: 15px 20px;
+  width: 150px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#mySidenav a:hover {
+  left: 0;
+  opacity: 1;
+}
+
+#course {
+  top: 20px;
+  background-color: #4caf50;
+}
+
+#trainer {
+  top: 80px;
+  background-color: #2196f3;
+}
+
+#projects {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#post {
+  top: 200px;
+  background-color: #555;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  z-index: 1000;
+}
+
+.btn-add a {
+  border: none;
+  color: #2196f3;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.btn-add a:hover {
+  color: #49b5b9;
+}
+.redirect-back {
+  padding: 2rem 0;
+  width: fit-content;
+  font-size: 20px;
+}
+.redirect-back .re-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-box-custom .course-handle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.course-handle a {
+  padding: 1rem;
+  border-radius: 15%;
+}
+.course-handle a:hover {
+  background-color: #2196f3;
+
+  color: white;
+}
+
+.cource-box img {
+  height: 250px;
+  width: 600px;
+}
