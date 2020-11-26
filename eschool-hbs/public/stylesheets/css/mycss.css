@@ -165,3 +165,10 @@
   border-radius: 100%;
   transition: 0.25s;
 }
+
+/* Post */
+.post-item {
+  width: 48%;
+  margin-right: 5px;
+  margin-top: 4rem;
+}
