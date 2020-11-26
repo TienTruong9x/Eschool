@@ -90,7 +90,7 @@
 
 .btn-add {
   position: absolute;
-  bottom: 10%;
+  bottom: -15%;
   right: 5%;
   z-index: 1000;
 }
@@ -133,4 +133,34 @@
 .cource-box img {
   height: 250px;
   width: 600px;
+}
+
+/* Trainer */
+.trainer {
+  position: relative;
+}
+.content {
+  margin-left: 80px;
+}
+
+.content {
+  position: relative;
+}
+
+.content-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.button-handle {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.5rem;
+  border: 5.5px solid transparent;
+}
+
+.content-item:hover .button-handle {
+  border-top: 5.5px solid #49b5b9;
+  border-radius: 100%;
+  transition: 0.25s;
 }

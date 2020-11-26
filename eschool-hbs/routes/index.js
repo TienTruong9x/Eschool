@@ -6,8 +6,8 @@ const trainerRoute = require("./trainer/trainer.route");
 function initRoutes(app) {
   app.use("/Auth", authRoute);
   app.use("/", siteRoute);
-  app.use("/Me", courseRoute);
-  app.use("/Admin", trainerRoute);
+  app.use("/Me/course", courseRoute);
+  app.use("/Admin/trainer", trainerRoute);
 }
 
 module.exports = initRoutes;

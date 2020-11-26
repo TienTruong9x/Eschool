@@ -1,0 +1,28 @@
+<div class="course-add container">
+    <div class="redirect-back">
+        <a href="/Admin/trainer" class="re-link">
+            <i class="fas fa-angle-double-left"></i>
+            <span>&nbsp;Trở lại</span>
+        </a>
+    </div>
+    <h1 style="text-align: center;">Thêm trainer mới</h1>
+    <form method="POST" action="/Admin/trainer/add">
+        <div class="form-group">
+            <label for="trainerName">Name</label>
+            <input type="text" class="form-control" id="trainerName" name="trainerName" placeholder="Trainer Name"
+                required="required">
+        </div>
+        <div class="form-group">
+            <label for="image">URL Image</label>
+            <input type="text" class="form-control" id="image" name="image" placeholder="Course IMG"
+                required="required">
+        </div>
+        <div class="form-group">
+            <label for="position">Vị trí</label>
+            <input type="text" class="form-control" id="position" name="position" placeholder="Trainer position"
+                required="required">
+        </div>
+
+        <button type="submit" class="btn btn-success">Thêm</button>
+    </form>
+</div>
