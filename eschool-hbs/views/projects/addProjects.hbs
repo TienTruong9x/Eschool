@@ -1,0 +1,22 @@
+<div class="course-add container">
+    <div class="redirect-back">
+        <a href="/Admin/projects" class="re-link">
+            <i class="fas fa-angle-double-left"></i>
+            <span>&nbsp;Trở lại</span>
+        </a>
+    </div>
+    <h1 style="text-align: center;">Thêm dự án mới</h1>
+    <form method="POST" action="/Admin/projects/add">
+        <div class="form-group">
+            <label for="projectName">Name</label>
+            <input type="text" class="form-control" id="projectName" name="projectName" placeholder="Project Name"
+                required="required">
+        </div>
+        <div class="form-group">
+            <label for="image">URL Image</label>
+            <input type="text" class="form-control" id="image" name="image" placeholder="Project IMG"
+                required="required">
+        </div>
+        <button type="submit" class="btn btn-success">Thêm</button>
+    </form>
+</div>
