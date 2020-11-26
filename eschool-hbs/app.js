@@ -8,6 +8,7 @@ var flash = require("connect-flash");
 var logger = require("morgan");
 var hbs = require("hbs");
 var connectDB = require("./app/config/connect");
+var helpers = require("./app/helpers/index");
 
 var app = express();
 
@@ -17,6 +18,9 @@ app.use(passport.session());
 
 // view engine setup
 hbs.registerPartials(__dirname + "/views/partials");
+//view helper
+helpers.setHelper(hbs);
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
@@ -29,6 +33,8 @@ app.use(express.static(path.join(__dirname, "public")));
 //Method overight
 var methodOverride = require("method-override");
 app.use(methodOverride("_method"));
+
+hbs.registerHelper();
 
 //authentication
 app.use(
