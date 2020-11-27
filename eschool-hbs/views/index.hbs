@@ -69,111 +69,23 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
+
                     <div class="item active">
+                        {{#each courses}}
                         <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-1.jpg"
+                            <div class="cource-box"><a href="#"><img class="img-responsive" src="{{this.image}}"
                                         alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Photoshop - Web Deisgn</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
+                                <div class=" cource-text">
+                                    <h4><a href="#">{{this.courseName}}</a> <span>${{this.price}}</span></h4>
+                                    <p>{{this.description}}.</p>
                                     <a href="#" class="btn btn-small">Read More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-2.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Sketch - Mobile App</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-3.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">CSE Engineering</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                        {{/each}}
+
                     </div>
-                    <div class="item">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-1.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Photoshop - Web Deisgn</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-2.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Sketch - Mobile App</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-3.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">CSE Engineering</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-1.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Photoshop - Web Deisgn</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-2.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">Sketch - Mobile App</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-3.jpg"
-                                        alt=""></a>
-                                <div class="cource-text">
-                                    <h4><a href="#">CSE Engineering</a> <span>$195</span></h4>
-                                    <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus
-                                        gravida eli eu sollicitudin.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -214,36 +126,14 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-1.jpg" alt=""
-                    class="img-responsive">
-                <h3>Web Development</h3>
+
+        {{#each projects}}
+        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="{{this.image}}" alt="" class="img-responsive">
+                <h3>{{this.projectName}}</h3>
                 <span>View Course</span>
             </a> </div>
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-2.jpg" alt=""
-                    class="img-responsive">
-                <h3>Virtual Assistant</h3>
-                <span>View Course</span>
-            </a> </div>
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-3.jpg" alt=""
-                    class="img-responsive">
-                <h3>Class Room</h3>
-                <span>View Course</span>
-            </a> </div>
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-4.jpg" alt=""
-                    class="img-responsive">
-                <h3>Web Programming</h3>
-                <span>View Course</span>
-            </a> </div>
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-5.jpg" alt=""
-                    class="img-responsive">
-                <h3>Art &amp; Photography</h3>
-                <span>View Course</span>
-            </a> </div>
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="images/project-6.jpg" alt=""
-                    class="img-responsive">
-                <h3>Interior Design</h3>
-                <span>View Course</span>
-            </a> </div>
+        {{/each}}
+
     </div>
 </div>
 <!--end projects-->
@@ -281,30 +171,16 @@
             </div>
         </div>
         <div class="row animate-box" style="border-bottom:0;">
+            {{#each trainers}}
             <div class="col-md-3 col-sm-3 text-center">
-                <div class="staff"> <img src="images/trainer-1.jpg" alt="trainer" class="img-responsive">
-                    <h3>Jean Smith</h3>
-                    <strong class="role">Marketing Instructor</strong>
+                <div class="staff"> <img src={{this.image}} alt="trainer" class="img-responsive">
+                    <div class="staff-info">
+                        <h3>{{this.trainerName}}</h3>
+                        <strong class="role">{{this.position}}</strong>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 text-center">
-                <div class="staff"> <img src="images/trainer-2.jpg" alt="trainer" class="img-responsive">
-                    <h3>Jeremy Lawson</h3>
-                    <strong class="role">PHP Instructor</strong>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 text-center">
-                <div class="staff"> <img src="images/trainer-3.jpg" alt="trainer" class="img-responsive">
-                    <h3>Jean Smith</h3>
-                    <strong class="role">Marketing Instructor</strong>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 text-center">
-                <div class="staff"> <img src="images/trainer-4.jpg" alt="trainer" class="img-responsive">
-                    <h3>Jean Andrews</h3>
-                    <strong class="role">Instructor</strong>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </div>
 </div>
@@ -318,42 +194,21 @@
                 <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus gravida eli eu
                     sollicitudin sem iaculis.</p>
             </div>
+
+            {{#each posts}}
             <div class="col-lg-4 col-md-4">
-                <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-1.jpg" alt=""></a>
+                <div class="cource-box"><a href="#"><img class="img-responsive" src="{{this.image}}" alt=""></a>
                     <div class="cource-text">
-                        <h4><a href="#">Photoshop - Web Deisgn</a></h4>
-                        <span class="posted-on">Jan. 26th, 2017</span> <span class="comment"><a href="">53 <i
-                                    class="icon-heart"></i></a></span>
-                        <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus gravida eli eu
-                            sollicitudin.</p>
+                        <h4><a href="#">{{this.postName}}</a></h4>
+                        <span class="posted-on">{{changeDate createdAt}}</span> <span class="comment"><a
+                                href="">{{this.heart}} <i class="icon-heart"></i></a></span>
+                        <p>{{this.description}}</p>
                         <a href="#" class="btn btn-orange">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-4.jpg" alt=""></a>
-                    <div class="cource-text">
-                        <h4><a href="#">Photoshop - Web Deisgn</a></h4>
-                        <span class="posted-on">Jan. 26th, 2017</span> <span class="comment"><a href="">53 <i
-                                    class="icon-heart"></i></a></span>
-                        <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus gravida eli eu
-                            sollicitudin.</p>
-                        <a href="#" class="btn btn-orange">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="cource-box"><a href="#"><img class="img-responsive" src="images/course-3.jpg" alt=""></a>
-                    <div class="cource-text">
-                        <h4><a href="#">Photoshop - Web Deisgn</a></h4>
-                        <span class="posted-on">Jan. 26th, 2017</span> <span class="comment"><a href="">53 <i
-                                    class="icon-heart"></i></a></span>
-                        <p>Suspendisse ante mi iaculis ac eleifend id venenatis non eros. Sed rhoncus gravida eli eu
-                            sollicitudin.</p>
-                        <a href="#" class="btn btn-orange">Read More</a>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
+
         </div>
     </div>
 </div>

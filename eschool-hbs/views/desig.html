@@ -1,83 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script src="https://kit.fontawesome.com/d2be3e9058.js"></script>
+    <title>My Now Amazing Webpage</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   </head>
-  <style>
-    #mySidenav a {
-      position: absolute;
-      left: -80px;
-      transition: 0.5s;
-      padding: 15px 20px;
-      width: 150px;
-      text-decoration: none;
-      font-size: 16px;
-      color: white;
-      border-radius: 0 5px 5px 0;
-      opacity: 0.8;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #mySidenav a:hover {
-      left: 0;
-      opacity: 1;
-    }
-
-    #course {
-      top: 20px;
-      background-color: #4caf50;
-    }
-
-    #trainer {
-      top: 80px;
-      background-color: #2196f3;
-    }
-
-    #projects {
-      top: 140px;
-      background-color: #f44336;
-    }
-
-    #post {
-      top: 200px;
-      background-color: #555;
-    }
-  </style>
   <body>
-    <div id="mySidenav" class="sidenav">
-      <a href="#" id="course">
-        <span>Courses</span>
-        <i class="fas fa-laptop-code"></i>
-      </a>
-      <a href="#" id="trainer">
-        <span>Trainers</span>
-        <i class="fas fa-chalkboard-teacher"></i>
-      </a>
-
-      <a href="#" id="projects">
-        <span>Projects</span>
-        <i class="fas fa-code"></i>
-      </a>
-      <a href="#" id="post">
-        <span>Posts</span>
-        <i class="fas fa-newspaper"></i>
-      </a>
+    <div class="your-class">
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
     </div>
 
-    <div style="margin-left: 80px">
-      <h2>Hoverable Sidenav Buttons</h2>
-      <p>Hover over the buttons in the left side navigation to open them.</p>
-    </div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.your-class').slick({
+          setting-name: setting-value
+        });
+      });
+    </script>
   </body>
 </html>

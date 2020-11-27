@@ -46,6 +46,11 @@
   margin: 22rem 0 5rem 0;
   position: relative;
 }
+.courses-custom {
+  box-shadow: none !important;
+}
+.course-text-custom {
+}
 #mySidenav a {
   position: absolute;
   left: -80px;
@@ -90,7 +95,7 @@
 
 .btn-add {
   position: absolute;
-  bottom: -15%;
+  bottom: -5%;
   right: 5%;
   z-index: 1000;
 }
@@ -137,6 +142,7 @@
 
 /* Trainer */
 .trainer {
+  margin-top: 5rem;
   position: relative;
 }
 .content {
@@ -152,6 +158,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   min-height: 10vh;
+  padding-bottom: 3rem;
 }
 .button-handle {
   display: flex;
@@ -159,7 +166,15 @@
   padding-top: 0.5rem;
   border: 5.5px solid transparent;
 }
-
+.content-item {
+  box-shadow: 0 14px 20px -12px rgba(0, 0, 0, 0.5);
+  margin-top: 5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+}
 .content-item:hover .button-handle {
   border-top: 5.5px solid #49b5b9;
   border-radius: 100%;
@@ -170,5 +185,5 @@
 .post-item {
   width: 48%;
   margin-right: 5px;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }

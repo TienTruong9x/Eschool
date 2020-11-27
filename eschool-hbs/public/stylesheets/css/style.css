@@ -281,6 +281,9 @@ ul.list-nav li i {
 }
 .cource-box .cource-text p {
   margin-bottom: 25px;
+  height: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .cource-box .cource-text span.posted-on {
   display: inline-block;
@@ -412,6 +415,8 @@ ul.list-nav li i {
 }
 .staff p {
   margin-bottom: 30px;
+}
+.staff-info {
 }
 .staff .role {
   color: gray;
