@@ -78,7 +78,7 @@
                                 <div class=" cource-text">
                                     <h4><a href="#">{{this.courseName}}</a> <span>${{this.price}}</span></h4>
                                     <p>{{this.description}}.</p>
-                                    <a href="#" class="btn btn-small">Read More</a>
+                                    <a href="/Course/details/{{this.slug}}" class="btn btn-small">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
     <div class="container-fluid">
 
         {{#each projects}}
-        <div class="col-md-4 col-sm-6 projects"><a href="#"><img src="{{this.image}}" alt="" class="img-responsive">
+        <div class="col-md-4 col-sm-6 projects"><a href="/Project/details/{{this.slug}}"><img src="{{this.image}}" alt="" class="img-responsive">
                 <h3>{{this.projectName}}</h3>
                 <span>View Course</span>
             </a> </div>
@@ -203,7 +203,7 @@
                         <span class="posted-on">{{changeDate createdAt}}</span> <span class="comment"><a
                                 href="">{{this.heart}} <i class="icon-heart"></i></a></span>
                         <p>{{this.description}}</p>
-                        <a href="#" class="btn btn-orange">Read More</a>
+                        <a href="/Post/details/{{this.slug}}" class="btn btn-orange">Read More</a>
                     </div>
                 </div>
             </div>
