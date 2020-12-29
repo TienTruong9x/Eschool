@@ -9,4 +9,5 @@ router.get("/edit/:slug", courseController.editCourse);
 router.put("/edit/:slug", courseController.editCoursePut);
 router.delete("/delete/:id", courseController.deleteCourse);
 
+
 module.exports = router;

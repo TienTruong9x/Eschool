@@ -23,6 +23,21 @@ class SiteController {
       }
     );
   }
+
+  //[GET] /About
+  aboutUs(req, res, next) {
+    res.render("about/about",{title:"About Us"});
+  }
+
+  //[GET] /Our-team
+  ourTeam(req, res, next) {
+    res.render("our-team/ourTeam",{title:"Our Team"});
+  }
+
+  //[GET] /Contact
+  contact(req, res, next) {
+    res.render("contact/contact",{title:"Contact"});
+  }
 }
 
 module.exports = new SiteController();
